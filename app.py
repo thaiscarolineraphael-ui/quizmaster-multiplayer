@@ -360,8 +360,7 @@ elif st.session_state.game_phase == "waiting":
     with col_mail2:
         st.markdown("<br>", unsafe_allow_html=True)
         if friend_email:
-            app_url = st.get_option("browser.serverAddress") or "localhost:8501"
-            access_link = f"http://{app_url}"
+            access_link = "https://quizmaster-multiplayer.streamlit.app"
             email_subject = "Convite para Batalha de Quiz no QuizMaster!"
             email_body = f"Olá! Venha jogar comigo no QuizMaster.\nAcesse o link: {access_link}\nE utilize o código da sala: {room['room_code']}"
             mail_to_link = f"mailto:{friend_email}?subject={urllib.parse.quote(email_subject)}&body={urllib.parse.quote(email_body)}"
